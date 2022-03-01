@@ -13,13 +13,19 @@ include 'includes/data/data.php';
 
 <body>
   <header></header>
-  <main class="container"> 
-    <?php foreach ($database as $data) : ?> 
-      <img src="<?= $data['poster'] ?>" alt="<?= $data['title'] ?>">
-      <h5><?= $data['title'] ?></h5>
-      <div><?= $data['author'] ?></div>
-      <time><?= $data['year'] ?></time>
-    <?php endforeach; ?>
+  <main class="container">
+    <div class="cards-container row">         
+          <?php foreach ($database as $data) : ?> 
+            <div class="col-3">    
+              <div class="disk-card">
+                <img class="img-fluid" src="<?= $data['poster'] ?>" alt="<?= $data['title'] ?>">
+                <h5><?= $data['title'] ?></h5>
+                <div><?= $data['author'] ?></div>
+                <time><?= $data['year'] ?></time>
+              </div>
+            </div>
+          <?php endforeach; ?>    
+    </div> 
   </main>
 </body>
 </html>
