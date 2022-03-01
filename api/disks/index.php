@@ -1,6 +1,6 @@
 <?php
 
-$search = $_GET['search'] ?? 's';
+$search = $_GET['search'] ?? '';
 
 $database = [
         [
