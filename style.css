@@ -1,3 +1,13 @@
 body {
 	color: red;
 }
+
+header {
+	height: 70px;
+	padding: 10px;
+	background-color: grey;
+}
+
+.logo {
+	max-height: 50px;
+}

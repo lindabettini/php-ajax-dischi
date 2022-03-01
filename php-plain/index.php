@@ -12,19 +12,12 @@ include 'includes/data/data.php';
 <?php include 'includes/templates/head.php' ?>
 
 <body>
-  <header></header>
+  <header>   
+      <img class="logo" src="../logo.png" alt="Spotify Logo">
+  </header>
   <main class="container">
-    <div class="cards-container row">         
-          <?php foreach ($database as $data) : ?> 
-            <div class="col-3">    
-              <div class="disk-card">
-                <img class="img-fluid" src="<?= $data['poster'] ?>" alt="<?= $data['title'] ?>">
-                <h5><?= $data['title'] ?></h5>
-                <div><?= $data['author'] ?></div>
-                <time><?= $data['year'] ?></time>
-              </div>
-            </div>
-          <?php endforeach; ?>    
+    <div class="cards-container row">       
+      <?php include 'includes/templates/disk-card.php' ?>             
     </div> 
   </main>
 </body>
