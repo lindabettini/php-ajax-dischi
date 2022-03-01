@@ -1,6 +1,6 @@
 <?php
 
-$search = 'New';
+$search = $_GET['search'] ?? 's';
 
 $database = [
         [
@@ -49,10 +49,11 @@ $database = [
 
 $results = $database;
 
-if($search) {
+if(!empty($search)) {
   $results = [];
   foreach($database as $movieDatas) {
-    if(strpos($movieDatas['title'], $search) !== false) $results[] = $movieDatas;
+    $title = strtolower($movieDatas['title']);
+    if(strpos($title, strtolower($search)) !== false) $results[] = $movieDatas;
   }
 }
 
