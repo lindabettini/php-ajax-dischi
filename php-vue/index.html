@@ -25,10 +25,15 @@
       <img class="logo" src="../logo.png" alt="Spotify Logo">
     </header>
 
-    <div class="container">
-      <main>
+    <main>
+      <div class="container pt-5">
+
+        <div class="text-center">
+          <input type="text" v-model="search" placeholder="Cerca un album" @keyup.enter="searchAlbum">
+          <button type="button" @click="searchAlbum">Cerca</button>
+        </div>
         <div v-if="disks.length" class="row pt-5">
-          <div v-for="diskDatas in disks" :key="diskDatas.title" class="col text-center">
+          <div v-for="diskDatas in disks" :key="diskDatas.title" class="col-2 text-center">
             <div class="disk-card">
               <img class="img-fluid mb-3" :src="diskDatas.poster" :alt="diskDatas.title">
               <h5>{{diskDatas.title}}</h5>
@@ -37,9 +42,9 @@
             </div>
           </div>
         </div>
-        <p v-else>Cerca un film!</p>
-      </main>
-    </div>
+        <p v-else>Nessun album !</p>
+      </div>
+    </main>
   </div>
 
   <script src="./js/script.js"></script>
