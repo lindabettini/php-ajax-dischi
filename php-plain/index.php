@@ -15,7 +15,10 @@ include 'includes/data/data.php';
   <header></header>
   <main class="container"> 
     <?php foreach ($database as $data) : ?> 
-      <h2><?= $data['title'] ?></h2>
+      <img src="<?= $data['poster'] ?>" alt="<?= $data['title'] ?>">
+      <h5><?= $data['title'] ?></h5>
+      <div><?= $data['author'] ?></div>
+      <time><?= $data['year'] ?></time>
     <?php endforeach; ?>
   </main>
 </body>
