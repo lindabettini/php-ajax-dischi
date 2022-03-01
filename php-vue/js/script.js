@@ -10,7 +10,7 @@ const app = new Vue({
   },
   methods: {
     searchAlbum(){
-      if (!this.search) return; 
+      if (!this.search) this.disks = []; 
       axios.get(`http://localhost:8889/php-ajax-dischi/api/disks?search=${this.search}`).then(res => {
         this.disks = res.data;
       }).catch(err => {console.log(err)})
