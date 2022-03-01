@@ -21,8 +21,12 @@
 <body>
   <div id="root">
 
+    <header>
+      <img class="logo" src="../logo.png" alt="Spotify Logo">
+    </header>
+
     <div class="container">
-      <div v-if="disks.length" class="row">
+      <div v-if="disks.length" class="row pt-5">
         <div v-for="diskDatas in disks" :key="diskDatas.title" class="col text-center">
           <div class="disk-card">
             <img class="img-fluid mb-3" :src="diskDatas.poster" :alt="diskDatas.title">
