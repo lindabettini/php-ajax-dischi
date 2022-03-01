@@ -13,6 +13,10 @@ include 'includes/data/data.php';
 
 <body>
   <header></header>
-  <main> <?php echo '$database' ?> </main>
+  <main class="container"> 
+    <?php foreach ($database as $data) : ?> 
+      <h2><?= $data['title'] ?></h2>
+    <?php endforeach; ?>
+  </main>
 </body>
 </html>
