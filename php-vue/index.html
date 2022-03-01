@@ -26,19 +26,20 @@
     </header>
 
     <div class="container">
-      <div v-if="disks.length" class="row pt-5">
-        <div v-for="diskDatas in disks" :key="diskDatas.title" class="col text-center">
-          <div class="disk-card">
-            <img class="img-fluid mb-3" :src="diskDatas.poster" :alt="diskDatas.title">
-            <h5>{{diskDatas.title}}</h5>
-            <div>{{diskDatas.author}}</div>
-            <time>{{diskDatas.year}}</time>
+      <main>
+        <div v-if="disks.length" class="row pt-5">
+          <div v-for="diskDatas in disks" :key="diskDatas.title" class="col text-center">
+            <div class="disk-card">
+              <img class="img-fluid mb-3" :src="diskDatas.poster" :alt="diskDatas.title">
+              <h5>{{diskDatas.title}}</h5>
+              <div>{{diskDatas.author}}</div>
+              <time>{{diskDatas.year}}</time>
+            </div>
           </div>
         </div>
-      </div>
-      <p v-else>Cerca un film!</p>
+        <p v-else>Cerca un film!</p>
+      </main>
     </div>
-
   </div>
 
   <script src="./js/script.js"></script>
