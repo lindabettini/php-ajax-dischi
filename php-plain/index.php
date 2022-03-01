@@ -16,7 +16,7 @@ include 'includes/data/data.php';
       <img class="logo" src="../logo.png" alt="Spotify Logo">
   </header>
   <main class="container">
-    <div class="cards-container row">       
+    <div class="cards-container row pt-5">       
       <?php include 'includes/templates/disk-card.php' ?>             
     </div> 
   </main>

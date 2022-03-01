@@ -1,13 +1,20 @@
 body {
-	color: red;
+	background-color: rgb(30, 45, 59);
+	color: white;
 }
 
 header {
 	height: 70px;
 	padding: 10px;
-	background-color: grey;
+	background-color: rgb(46, 58, 70);
 }
 
 .logo {
 	max-height: 50px;
+}
+
+.disk-card {
+	background-color: rgb(46, 58, 70);
+	padding: 15px;
+	height: 350px;
 }
